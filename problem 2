@@ -1,0 +1,26 @@
+#include<stdio.h>
+int main()
+{   
+  int t;
+  scanf("%d",&t);
+    long int f[t];
+    unsigned long int sum=0;
+    
+    for(int i= 0;i<t;i++)
+    {
+      f[0]=1;
+      f[1]=1;
+        
+      f[i]=f[i-1]+f[i-2];
+        
+        if(f[i]<4000000)
+	  {
+	    if(f[i]%2==0)
+	    sum+=f[i];
+	  }
+        else
+	  break;
+    }
+    printf("%lu\n", sum);
+    return 0;
+}
