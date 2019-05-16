@@ -1,0 +1,18 @@
+#include <stdio.h>
+
+int main()
+{
+    int sum=0, sum2=0;
+    for(int i=1;i<=100; i++ )
+    {
+        sum+=i;
+        sum2+=i*i;
+    }
+    int ss;
+    ss= sum*sum;
+    int diff;
+    diff=ss-sum2;
+    printf("%d",diff);
+
+    return 0;
+}
