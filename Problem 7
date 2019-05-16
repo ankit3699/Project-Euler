@@ -1,0 +1,33 @@
+#include <stdio.h>
+
+int main()
+{
+    long int a=2147483647;
+    int c=0;
+    for(int i=1; i<a; i++)
+    {
+        for(int j=1; j<=i;j++)
+        {
+            if(i%j==0)
+            {
+                if(j<i && j!=1)
+                {
+                    break;
+                }
+                else
+                if(i==j)
+                {
+                    ++c;
+                    printf("%ld -> %d\n", i, c);
+                    
+                }
+            }
+            if(c==10002)
+                    {
+                        break;
+                    }
+        }
+    }
+
+    return 0;
+}
