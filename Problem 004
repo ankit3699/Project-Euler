@@ -1,0 +1,40 @@
+#include <stdio.h>
+
+int main()
+{
+    int rev;
+    int n;
+    int r;
+    int max=0;
+    for(int i=100;i<1000;i++)
+    {
+        for(int j=100;j<1000;j++)
+	  {
+	    rev=0;
+            n=i*j;
+	    r=n;
+	    printf("\n%d->\t",r);
+            while(r!=0)
+            {
+                rev=rev*10;
+                rev=rev+r%10;
+                r=r/10;
+            }
+	    printf("%d",rev);
+            if(rev==n)
+	      {
+                printf("\t%d=",i*j);
+                printf("%d*%d",i,j);
+		if(n>max)
+		  {
+		    max=n;
+		  }
+	      }
+	  }
+        
+    }
+    printf("\nmax->%d\n",max);
+    
+
+    return 0;
+}
